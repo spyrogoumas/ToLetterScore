@@ -1,0 +1,37 @@
+import java.util.Scanner; 
+/**
+ *
+ * @author spyro
+ */
+public class JavaApplication6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    Scanner console = new Scanner(System.in); 
+    
+    System.out.print("Please input 5 numbers separated by space: ");
+    double num1 = console.nextDouble();
+    double num2 = console.nextDouble();
+    double num3 = console.nextDouble();
+    double num4 = console.nextDouble();
+    double num5 = console.nextDouble();
+    
+    System.out.println("-------------------------------------");
+    
+    double min = Math.min(Math.min(Math.min(Math.min(num1, num2), num3), num4), num5);
+    double max = Math.max(Math.max(Math.max(Math.max(num1, num2), num3), num4), num5);
+    double sum = num1 + num2 + num3 + num4 + num5; 
+    double mean = sum / 5; 
+    double difference = (Math.pow(num1 - mean, 2)) + (Math.pow(num2 - mean, 2)) + (Math.pow(num3 - mean, 2)) + (Math.pow(num4 - mean, 2)) + (Math.pow(num5 - mean, 2)); 
+    double variance = difference / 5; 
+    double standardDeviation = (Math.sqrt(variance)); 
+    
+    System.out.printf("Numbers: %.2f %.2f %.2f %.2f %.2f\n", num1, num2, num3, num4, num5); 
+    System.out.printf("Mean: %.2f\n", mean); 
+    System.out.printf("Minimum: %.2f\n", min); 
+    System.out.printf("Maximum: %.2f\n", max);
+    System.out.printf("Standard Deviation: %.2f\n", standardDeviation); 
+    }
+}
